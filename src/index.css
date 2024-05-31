@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins/Poppins-Regular.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("fonts/Poppins/Poppins-Light.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("fonts/Poppins/Poppins-SemiBold.ttf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "HKGrotesk";
+  src: url("fonts/HKGrotesk/HKGrotesk-Regular.otf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Omnes";
+  src: url("fonts/Omnes/Omnes-Regular.otf");
+}
+
+@font-face {
+  font-family: "Omnes-Light";
+  src: url("fonts/Omnes/Omnes-Light.otf");
+}
+
+@font-face {
+  font-family: "Omnes-SemiBold";
+  src: url("fonts/Omnes/Omnes-Semibold.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Omnes-Bold";
+  src: url("fonts/Omnes/Omnes-Bold.otf");
+}
+
+:root {
+  --toastify-text-color-light: #fff;
+  --toastify-text-color-dark: #fff;
+  --toastify-font-family: "Poppins";
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Poppins-Light", "sans-serif";
+}

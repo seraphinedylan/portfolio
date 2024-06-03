@@ -1,70 +1,62 @@
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/Poppins/Poppins-Regular.ttf");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: "Poppins-Light";
-  src: url("fonts/Poppins/Poppins-Light.ttf");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: "Poppins-SemiBold";
-  src: url("fonts/Poppins/Poppins-SemiBold.ttf");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: "HKGrotesk";
-  src: url("fonts/HKGrotesk/HKGrotesk-Regular.otf");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: "Omnes";
-  src: url("fonts/Omnes/Omnes-Regular.otf");
-}
-
-@font-face {
-  font-family: "Omnes-Light";
-  src: url("fonts/Omnes/Omnes-Light.otf");
-}
-
-@font-face {
-  font-family: "Omnes-SemiBold";
-  src: url("fonts/Omnes/Omnes-Semibold.otf");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Omnes-Bold";
-  src: url("fonts/Omnes/Omnes-Bold.otf");
-}
-
-:root {
-  --toastify-text-color-light: #fff;
-  --toastify-text-color-dark: #fff;
-  --toastify-font-family: "Poppins";
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Poppins-Light", "sans-serif";
+html, body, #root {
+  height: 100%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #212f3d;
+  /* background:#283747; */
+  color: white;
+  font-family: "Arial", "sans-serif";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) translateX(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+.fragment {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 165, 0, 0.7);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.fragment:nth-child(2n) {
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.fragment:nth-child(3n) {
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+

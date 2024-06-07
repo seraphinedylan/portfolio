@@ -25,7 +25,7 @@ module.exports = {
         99: "99",
         max: "9999",
       },
-      minHeight: spacings,
+      minHeight: { ...spacings, "1/2": "50vh" },
       maxHeight: spacings,
       minWidth: spacings,
       maxWidth: spacings,

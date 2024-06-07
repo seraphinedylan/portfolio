@@ -2,6 +2,7 @@ import AssestSection from "~/pages/AssestSection";
 import Contact from "~/pages/Contact";
 import Footer from "~/pages/Footer";
 import Header from "~/pages/Header";
+import Skills from "~/pages/Skills";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <main className="shrink-0 grow">
         <AssestSection />
-        {/* <div className="h-screen">coucou</div> */}
+        <Skills />
         <Contact />
       </main>
       <Footer />

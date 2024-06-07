@@ -1,6 +1,8 @@
+import clsx from "clsx";
 import PropTypes from "prop-types";
+
 function Section({ className, children }) {
-  return <div className={`h-dvh ${className}`}>{children}</div>;
+  return <div className={clsx("min-h-dvh w-full", className)}>{children}</div>;
 }
 
 Section.propTypes = {

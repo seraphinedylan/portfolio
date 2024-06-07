@@ -1,17 +1,18 @@
-import Navbar from "~/components/NavBar";
-import AboutBlock from "~/pages/AboutBlock";
-import HomeBlock from "~/pages/HomeBlock";
+import AssestSection from "~/pages/AssestSection";
+import Contact from "~/pages/Contact";
+import Footer from "~/pages/Footer";
+import Header from "~/pages/Header";
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <div id="home">
-        <HomeBlock />
-      </div>
-      <div id="about">
-        <AboutBlock />
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="shrink-0 grow">
+        <AssestSection />
+        {/* <div className="h-screen">coucou</div> */}
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

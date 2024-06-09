@@ -7,7 +7,11 @@ import clsx from "clsx";
 import BurgerMenuIcon from "~/icons/BurgerMenuIcon";
 import Terminal from "~/icons/TerminalIcon";
 
-const menuItems = [{ label: "Home" }, { label: "About" }, { label: "Work" }];
+const menuItems = [
+  { label: "Home", href: "#homeSection" },
+  { label: "Work", href: "#assets" },
+  { label: "About", href: "#aboutSection" },
+];
 
 const iconLinks = [
   { label: "Linkedin", href: "https://linkedin.com/me", icon: faLinkedin },
@@ -41,7 +45,7 @@ function NavBar() {
           {menuItems.map((item, index) => (
             <li key={index}>
               <a
-                href="/"
+                href={item.href}
                 className="inline-block rounded-full px-4 py-2 hover:bg-accent-foreground hover:text-secondary-foreground focus:bg-accent-foreground focus:text-secondary"
               >
                 {item.label}

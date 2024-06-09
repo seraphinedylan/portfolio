@@ -1,4 +1,4 @@
-import AssestSection from "~/pages/AssestSection";
+import AssetsSection from "~/pages/AssetsSection";
 import Contact from "~/pages/Contact";
 import Footer from "~/pages/Footer";
 import Header from "~/pages/Header";
@@ -9,7 +9,7 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="shrink-0 grow">
-        <AssestSection />
+        <AssetsSection />
         <Skills />
         <Contact />
       </main>

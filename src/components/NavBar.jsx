@@ -8,9 +8,9 @@ import BurgerMenuIcon from "~/icons/BurgerMenuIcon";
 import Terminal from "~/icons/TerminalIcon";
 
 const menuItems = [
-  { label: "Home", href: "#homeSection" },
+  { label: "Home", href: "#home" },
   { label: "Work", href: "#assets" },
-  { label: "About", href: "#aboutSection" },
+  { label: "About", href: "#about" },
 ];
 
 const iconLinks = [
@@ -32,6 +32,7 @@ function NavBar() {
           <Terminal size={28} gradient />
           Dylan Séraphine
         </a>
+        {/* mobile button menu */}
         <div className="md:hidden">
           <button
             className="relative flex rounded-full bg-blue-gradient p-2 text-base shadow-md"
@@ -40,8 +41,10 @@ function NavBar() {
             <BurgerMenuIcon size={24} gradient />
           </button>
         </div>
+        {/* end mobile button menu */}
 
-        <ul className="text-md hidden rounded-full bg-card px-4 py-3 shadow-md md:flex md:flex-row">
+        {/* deskop menu */}
+        <ul className="text-md hidden rounded-full bg-card shadow-md md:flex md:flex-row md:px-3 md:py-2 lg:px-4 lg:py-3">
           {menuItems.map((item, index) => (
             <li key={index}>
               <a
@@ -53,14 +56,16 @@ function NavBar() {
             </li>
           ))}
         </ul>
+        {/* end deskop menu */}
 
-        <div className="hidden md:flex md:items-center md:gap-3 md:justify-self-end md:rounded-b-lg md:bg-transparent md:p-6 md:text-xl">
-          <div className="flex flex-wrap gap-2 text-xl lg:flex lg:justify-end lg:gap-0">
+        {/* deskop social networks menu */}
+        <div className="hidden items-center gap-3 md:flex">
+          <div className="flex justify-end gap-4">
             {iconLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="p-2 text-card transition-colors duration-200 hover:text-accent-foreground focus:text-accent-foreground"
+                className=" text-muted transition-colors duration-200 hover:text-destructive-foreground focus:text-destructive-foreground"
               >
                 <FontAwesomeIcon icon={link.icon} className="text-4xl" />
               </a>
@@ -68,7 +73,9 @@ function NavBar() {
           </div>
         </div>
       </div>
+      {/* end deskop social networks menu */}
 
+      {/* mobile menu */}
       <div
         className={clsx("bg-popover md:hidden", {
           block: showMenu,
@@ -95,6 +102,7 @@ function NavBar() {
           </div>
         </div>
       </div>
+      {/* end mobile menu */}
     </nav>
   );
 }

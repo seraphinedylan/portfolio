@@ -7,25 +7,20 @@ function Chip({
   endIcon,
   label,
   color = "primary",
-  size = "md",
   onClick,
+  className,
 }) {
   const colorClasses = {
     primary: "text-primary bg-primary-foreground",
     seconday: "text-secondary bg-secondary-foreground",
   };
 
-  const sizeClasses = {
-    lg: "text-lg",
-    md: "text-md",
-    sm: "text-sm",
-  };
   return (
     <div
       className={clsx(
-        "flex items-center rounded-full px-4 py-2",
-        sizeClasses[size] ?? sizeClasses.md,
-        colorClasses[color] ?? colorClasses.primary
+        "flex items-center rounded-full",
+        colorClasses[color] ?? colorClasses.primary,
+        className
       )}
       onClick={onClick}
     >
@@ -41,7 +36,6 @@ Chip.propTypes = {
   endIcon: PropTypes.object,
   label: PropTypes.string.isRequired,
   color: PropTypes.oneOf(["primary", "secondary"]),
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
   onClick: PropTypes.func,
 };
 

@@ -91,13 +91,6 @@
   --ring: hsl(205, 85%, 78%);
 }
 
-/* html,
-body {
-  min-height: 100%;
-  overflow-x: hidden;
-} */
-
-
 html, body {
   margin: 0;
   padding: 0;

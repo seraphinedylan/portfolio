@@ -16,10 +16,7 @@ function Home() {
   };
 
   const interests = [
-    {
-      startIcon: faCode,
-      label: "Lorem Ipsum",
-    },
+    { startIcon: faCode, label: "Lorem Ipsum" },
     { startIcon: faPeopleGroup, label: "Lorem Ipsum" },
     { startIcon: faRocket, label: "Lorem Ipsum" },
   ];
@@ -28,7 +25,7 @@ function Home() {
     <div className="flex items-center justify-center">
       <div className="absolute inset-x-0 bottom-0 hidden h-1/4 bg-gradient-to-b from-transparent to-background md:inline-block" />
       <div
-        className="absolute hidden cursor-pointer justify-center lg:bottom-0 lg:flex xl:bottom-0"
+        className="absolute hidden cursor-pointer justify-center lg:bottom-2 lg:flex xl:bottom-2"
         onClick={scrollDown}
       >
         <Lottie animationData={MouseAnimation} className="h-auto w-14" />

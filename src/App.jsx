@@ -3,6 +3,7 @@ import Contact from "~/pages/Contact";
 import Footer from "~/pages/Footer";
 import Header from "~/pages/Header";
 import Skills from "~/pages/Skills";
+import WorkSection from "~/pages/WorkSection";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <main className="shrink-0 grow">
         <AssetsSection />
+        <WorkSection />
         <Skills />
         <Contact />
       </main>

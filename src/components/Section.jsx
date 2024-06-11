@@ -1,9 +1,8 @@
-import clsx from "clsx";
 import PropTypes from "prop-types";
 
 function Section({ className, children, id }) {
   return (
-    <div id={id} className={clsx("min-h-dvh w-full", className)}>
+    <div id={id} className={`my-20 min-h-dvh w-full ${className}`}>
       {children}
     </div>
   );

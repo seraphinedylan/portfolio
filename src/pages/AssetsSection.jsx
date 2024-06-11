@@ -20,7 +20,7 @@ function AssetsSection() {
     },
     {
       icon: RocketIcon,
-      title: "Strategy-Minded",
+      title: "mind blaba",
       description:
         "Urna porttitor rhoncus dolor purus non enim praesent ornare.",
     },
@@ -28,7 +28,7 @@ function AssetsSection() {
   return (
     <div id="assets" className="pt-1">
       <div className="my-12 flex justify-center lg:my-24">
-        <Card className="mx-4 p-6 lg:mx-24 lg:p-10">
+        <Card className="mx-5 p-6 md:mx-6 lg:mx-8 lg:p-10 xl:mx-20">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-20">
             {assets.map((asset, index) => {
               const Icon = asset.icon;

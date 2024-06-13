@@ -29,6 +29,10 @@ module.exports = {
       maxHeight: spacings,
       minWidth: spacings,
       maxWidth: spacings,
+      width: {
+        730: "45.625rem",
+        25: "25rem",
+      },
       spacing: spacings,
       borderWidth: {
         16: "16px",

@@ -1,11 +1,11 @@
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Contact() {
+function ContactSection() {
   return (
     <div className="flex flex-col items-center justify-between gap-10 border-y border-border py-8 md:flex-row md:gap-0 md:px-6 md:py-16 lg:py-24">
       <h2 className="text-center text-2xl text-secondary-foreground md:w-1/3 md:text-start lg:text-5xl">
-        Interested in working together?
+        Interested in working together ?
       </h2>
       <a
         href="mailto:me@example.com"
@@ -21,4 +21,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactSection;

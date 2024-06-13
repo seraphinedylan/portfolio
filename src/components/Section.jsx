@@ -11,7 +11,7 @@ function Section({ className, children, id }) {
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default Section;

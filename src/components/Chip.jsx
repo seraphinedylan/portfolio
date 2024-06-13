@@ -13,6 +13,7 @@ function Chip({
   const colorClasses = {
     primary: "text-primary bg-primary-foreground",
     seconday: "text-secondary bg-secondary-foreground",
+    gray: "text-popover-foreground bg-muted-foreground",
   };
 
   return (
@@ -35,7 +36,7 @@ Chip.propTypes = {
   startIcon: PropTypes.object,
   endIcon: PropTypes.object,
   label: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(["primary", "secondary"]),
+  color: PropTypes.oneOf(["primary", "secondary", "gray"]),
   onClick: PropTypes.func,
 };
 

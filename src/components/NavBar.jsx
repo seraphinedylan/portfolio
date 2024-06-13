@@ -4,18 +4,26 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 
-import BurgerMenuIcon from "~/icons/BurgerMenuIcon";
-import Terminal from "~/icons/TerminalIcon";
+import BurgerMenuIcon from "~/assets/icons/BurgerMenuIcon";
+import Terminal from "~/assets/icons/TerminalIcon";
 
 const menuItems = [
   { label: "Home", href: "#home" },
-  { label: "Work", href: "#assets" },
+  { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
 ];
 
 const iconLinks = [
-  { label: "Linkedin", href: "https://linkedin.com/me", icon: faLinkedin },
-  { label: "GitHub", href: "https://github.com/me", icon: faGithub },
+  {
+    label: "Linkedin",
+    href: "https://fr.linkedin.com/in/dylan-séraphine-7aab07195",
+    icon: faLinkedin,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/seraphinedylan",
+    icon: faGithub,
+  },
 ];
 
 function NavBar() {
@@ -65,6 +73,8 @@ function NavBar() {
               <a
                 key={index}
                 href={link.href}
+                target="_blank"
+                rel="noreferrer"
                 className=" text-muted transition-colors duration-200 hover:text-destructive-foreground focus:text-destructive-foreground"
               >
                 <FontAwesomeIcon icon={link.icon} className="text-4xl" />
@@ -77,7 +87,7 @@ function NavBar() {
 
       {/* mobile menu */}
       <div
-        className={clsx("bg-popover md:hidden", {
+        className={clsx("bg-card md:hidden", {
           block: showMenu,
           hidden: !showMenu,
         })}
@@ -85,14 +95,14 @@ function NavBar() {
         <ul className="flex flex-col gap-4 border-b border-popover-foreground p-8 text-lg">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a href="/" className="inline-block">
+              <a href={item.href} className="block">
                 {item.label}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex flex-row items-center gap-3 rounded-b-lg p-6 text-xl shadow-lg">
+        <div className="flex flex-row items-center gap-3 rounded-b-lg p-6 text-xl shadow-md">
           <div className="flex flex-wrap gap-2 text-xl lg:flex lg:justify-end lg:gap-0">
             {iconLinks.map((link, index) => (
               <a key={index} href={link.href} className="p-2">

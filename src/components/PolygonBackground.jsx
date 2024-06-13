@@ -14,11 +14,11 @@ function PolygonBackground({
   };
 
   return (
-    <div className="relative size-full">
+    <div className="relative -z-10">
       <div className="transform-gpu blur-xl md:blur-3xl">
         <div
           className={clsx(
-            "absolute -z-10 aspect-1155/678 opacity-50",
+            "absolute bottom-0 aspect-1155/678 opacity-50",
             sizes[size],
             {
               "left-0": left,

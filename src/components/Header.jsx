@@ -1,18 +1,23 @@
-import Navbar from "~/components/NavBar";
-import Home from "~/pages/Home";
+import PropTypes from "prop-types";
 
-function Header() {
+import Navbar from "~/components/NavBar";
+
+function Header({ children }) {
   return (
     <div
       id="home"
       className="header relative z-0 bg-cover bg-center bg-no-repeat"
     >
       <Navbar className="fixed left-0 top-0 z-10 w-full" />
-      <div className="mt-24 flex flex-col justify-end lg:mt-1 lg:min-h-screen">
-        <Home />
+      <div className="mt-28 flex flex-col justify-end lg:mt-1 lg:min-h-screen">
+        {children}
       </div>
     </div>
   );
 }
+
+Header.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Header;

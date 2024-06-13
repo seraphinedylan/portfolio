@@ -1,24 +1,21 @@
-import {
-  faCode,
-  faPeopleGroup,
-  faRocket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlane, faFilm, faDumbbell } from "@fortawesome/free-solid-svg-icons";
 import Lottie from "lottie-react";
 
 import MouseAnimation from "~/assets/animations/mouse.json";
+import Me from "~/assets/images/me.png";
 import Chip from "~/components/Chip";
 import Hero from "~/components/Hero";
 
-function Home() {
+function HomeSection() {
   const scrollDown = () => {
     const nextSection = document.getElementById("assets");
     nextSection.scrollIntoView({ behavior: "smooth" });
   };
 
   const interests = [
-    { startIcon: faCode, label: "Lorem Ipsum" },
-    { startIcon: faPeopleGroup, label: "Lorem Ipsum" },
-    { startIcon: faRocket, label: "Lorem Ipsum" },
+    { startIcon: faDumbbell, label: "Sports" },
+    { startIcon: faPlane, label: "Travel" },
+    { startIcon: faFilm, label: "Movies" },
   ];
 
   return (
@@ -51,7 +48,7 @@ function Home() {
           alt="me"
           width="480"
           height="620"
-          src="src/images/Subject.png"
+          src={Me}
           className=" object-cover object-top"
         />
       </div>
@@ -59,4 +56,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeSection;

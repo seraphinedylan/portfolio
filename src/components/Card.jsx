@@ -5,7 +5,7 @@ function Card({ children, className }) {
   return (
     <div
       className={clsx(
-        "rounded-xl border border-secondary bg-card shadow-sm md:rounded-3xl",
+        "overflow-hidden rounded-xl border border-secondary bg-card shadow-sm md:rounded-3xl",
         className
       )}
     >

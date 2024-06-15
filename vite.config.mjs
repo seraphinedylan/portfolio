@@ -8,6 +8,7 @@ import eslint from "vite-plugin-eslint";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: "/portfolio/",
   plugins: [react(), eslint()],
   server: { open: true, port: 3000 },
   resolve: {

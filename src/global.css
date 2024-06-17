@@ -149,12 +149,12 @@ h5 {
 
 @media (max-width: 640px) {
   .header {
-    background-image: url("src/assets/backgrounds/bg-header-sm.svg");
+    background-image: url("./assets/backgrounds/bg-header-sm.svg");
   }
 }
 
 @media (min-width: 641px) {
   .header {
-    background-image: url("src/assets/backgrounds/bg-header.svg");
+    background-image: url("./assets/backgrounds/bg-header.svg");
   }
 }

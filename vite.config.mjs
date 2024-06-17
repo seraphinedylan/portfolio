@@ -10,6 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   base: "/portfolio/",
   plugins: [react(), eslint()],
+  assetsInclude: ["**/*.svg"],
   server: { open: true, port: 3000 },
   resolve: {
     alias: [{ find: "~", replacement: path.resolve(__dirname, "src") }],

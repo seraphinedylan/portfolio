@@ -7,7 +7,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "predeploy": "yarn build",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",

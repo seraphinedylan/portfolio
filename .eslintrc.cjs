@@ -16,6 +16,7 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    "comma-dangle": ["error", "always-multiline"],
     "tailwindcss/no-custom-classname": "off",
     "react-refresh/only-export-components": [
       "warn",

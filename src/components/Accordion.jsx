@@ -48,7 +48,7 @@ function Accordion({ experiences }) {
               <img
                 src={experience.logo}
                 alt={`logo-${experience.company}`}
-                className="my-auto ml-1 w-1/3 md:order-2 md:w-1/6 lg:w-40"
+                className="my-auto mb-3 ml-1 w-1/3 md:order-2 md:mb-0 md:w-1/6 lg:w-40"
               />
               <div className="md:w-4/5">
                 <div className="flex flex-col gap-2 md:flex-row">

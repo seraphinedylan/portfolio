@@ -23,7 +23,7 @@ function PolygonBackground({
             {
               "left-0": left,
               "right-0": !left,
-            }
+            },
           )}
           style={{
             backgroundImage: `linear-gradient(to top right, ${fromColor}, ${toColor})`,

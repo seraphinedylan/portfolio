@@ -42,7 +42,7 @@ PyramidCard.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

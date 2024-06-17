@@ -21,7 +21,7 @@ function Chip({
       className={clsx(
         "flex items-center rounded-full",
         colorClasses[color] ?? colorClasses.primary,
-        className
+        className,
       )}
       onClick={onClick}
     >

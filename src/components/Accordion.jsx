@@ -22,20 +22,18 @@ function Accordion({ experiences }) {
     }
   };
   return (
-    <div className="flex w-full flex-col gap-4 lg:w-730">
+    <div className="flex flex-1 flex-col gap-4">
       {experiences.map((experience, index) => (
         <div key={index}>
           <div
-            className="flex min-h-12 cursor-pointer justify-between rounded-md bg-border p-2 text-sm text-secondary-foreground md:min-h-14 md:px-5 md:py-3 md:text-base lg:rounded-xl "
+            className="flex min-h-12 min-w-80 cursor-pointer items-center justify-between rounded-md bg-border p-2 text-sm text-secondary-foreground md:px-5 md:py-3 md:text-base lg:rounded-xl "
             onClick={() => handleExpansion(index)}
           >
-            <div className="flex items-center space-x-2">
-              <p>{experience.title}</p>
-              <span>-</span>
-              <p>{experience.company}</p>
-            </div>
+            <span>
+              {experience.title} - {experience.company}
+            </span>
             <div className="flex items-center space-x-2 md:space-x-4">
-              <div>{experience.period}</div>
+              <span>{experience.period}</span>
               <FontAwesomeIcon
                 icon={expanded === index ? faMinusCircle : faPlusCircle}
                 className="text-md lg:text-lg"
@@ -48,7 +46,7 @@ function Accordion({ experiences }) {
               <img
                 src={experience.logo}
                 alt={`logo-${experience.company}`}
-                className="my-auto mb-3 ml-1 w-1/3 md:order-2 md:mb-0 md:w-1/6 lg:w-40"
+                className="my-auto w-1/3 max-w-40 md:order-2"
               />
               <div className="md:w-4/5">
                 <div className="flex flex-col gap-2 md:flex-row">
@@ -57,9 +55,9 @@ function Accordion({ experiences }) {
                       icon={faLocationDot}
                       className="text-primary"
                     />
-                    <p className="font-bold text-secondary-foreground">
-                      {experience.title}
-                    </p>
+                    <span className="font-bold text-secondary-foreground">
+                      {experience.location}
+                    </span>
                   </div>
                   <a
                     href={experience.website}
@@ -74,7 +72,7 @@ function Accordion({ experiences }) {
                     {experience.company}
                   </a>
                 </div>
-                <div className="bg-gray-500z">
+                <div>
                   <p className="my-2 mb-3 text-sm text-popover-foreground md:my-4 md:mb-5 md:text-base">
                     {experience.description}
                   </p>
@@ -101,7 +99,7 @@ function Accordion({ experiences }) {
 }
 
 Accordion.propTypes = {
-  experience: PropTypes.object.isRequired,
+  experiences: PropTypes.array.isRequired,
   index: PropTypes.number.isRequired,
   expanded: PropTypes.number,
   handleExpansion: PropTypes.func.isRequired,

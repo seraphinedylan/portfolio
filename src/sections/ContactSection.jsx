@@ -8,7 +8,7 @@ function ContactSection() {
         Interested in working together ?
       </h2>
       <a
-        href="mailto:me@example.com"
+        href="mailto:dylan.seraphine@hotmail.com"
         className="group relative flex items-center gap-2 rounded-full bg-gradient-to-tr from-destructive to-accent px-8 py-2 text-xl text-secondary-foreground shadow-md md:px-5 md:py-2 lg:px-10 lg:py-4 lg:text-3xl"
       >
         Send Me a Message

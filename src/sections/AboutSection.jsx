@@ -18,9 +18,9 @@ const descEn =
 const experiences = [
   {
     period: "2022 - Today",
-    title: "Full Stack Developer",
+    title: "FullStack Developer",
     location: "Bordeaux, France",
-    company: "Elsan Care",
+    company: "Elsan",
     website: "https://www.elsan.care/fr",
     description:
       "Permanent contract - Design of a SaaS solution to facilitate the work of nursing and administrative staff, using Agile methodology.",
@@ -35,9 +35,9 @@ const experiences = [
   },
   {
     period: "2021 - 2022",
-    title: "Full Stack Developer",
+    title: "FullStack Developer",
     location: "Bordeaux, France",
-    company: "Elsan Care",
+    company: "Elsan",
     website: "https://www.elsan.care/fr",
     description:
       "Internship - Design of mobile applications to improve the patient experience and development of SaaS solutions to simplify the work of nursing and administrative staff, using Agile methodology.",
@@ -158,8 +158,10 @@ function AboutSection() {
         />
       </div>
 
-      <div className="mx-5 flex justify-center space-y-4 lg:mx-auto">
-        <Accordion experiences={experiences} />
+      <div className="flex justify-center">
+        <div className="mx-5 w-full lg:mx-0 lg:w-730">
+          <Accordion experiences={experiences} />
+        </div>
       </div>
     </Section>
   );

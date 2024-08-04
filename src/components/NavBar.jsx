@@ -16,7 +16,7 @@ const menuItems = [
 const iconLinks = [
   {
     label: "Linkedin",
-    href: "https://fr.linkedin.com/in/dylan-séraphine-7aab07195",
+    href: "https://www.linkedin.com/in/dylan-s%C3%A9raphine-7aab07195",
     icon: faLinkedin,
   },
   {
@@ -75,7 +75,7 @@ function NavBar() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className=" text-muted transition-colors duration-200 hover:text-destructive-foreground focus:text-destructive-foreground"
+                className=" text-muted transition-colors duration-200 hover:text-destructive-foreground active:text-destructive-foreground"
               >
                 <FontAwesomeIcon icon={link.icon} className="text-4xl" />
               </a>

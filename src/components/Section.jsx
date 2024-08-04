@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 function Section({ className, children, id }) {
   return (
-    <div id={id} className={`my-20 min-h-dvh w-full ${className}`}>
+    <section id={id} className={`my-20 min-h-dvh w-full ${className}`}>
       {children}
-    </div>
+    </section>
   );
 }
 
